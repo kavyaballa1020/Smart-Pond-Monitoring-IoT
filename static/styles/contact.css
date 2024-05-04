@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to right, #f7f7f7, #e8e8e8);
+    color: #333;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.btn{
+    color: #ffffff;
+    background-color: #131f7e;
+    border: #191e43;
+    border-radius: 16px;
+}
+.btn :hover{
+    background-color: #191e43 !important;
+    border: #191e43 !important;
+    border-radius: 16px;
+}
+
+.contact-card .card-header {
+    background-color: #191e43;
+    color: #fff;
+    border-bottom: none;
+    text-align: center;
+    text-transform: uppercase; 
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-card .card-body {
+    padding: 30px;
+}
+
+.contact-card .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-card .form-group label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-svg {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .contact-card,
+    .contact-svg {
+        max-width: 100%;
+    }
+}

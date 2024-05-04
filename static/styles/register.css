@@ -1,0 +1,103 @@
+.navbar{
+    background-color: #1a225e;
+}
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+}
+
+.form-container {
+    max-width: 400px;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+    margin-top: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+}
+.form-control {
+    border-radius: 0;
+}
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #192791;
+    border: #1a225e;
+    border-radius: 12px;
+}
+.btn-primary:hover{
+    background-color: #0b134a;
+}
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a225e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.form-container .mt-3 {
+    margin-top: 10px;
+}
+.footer .icons a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .icons a:hover:before {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.footer .icons a:hover i {
+    animation: hover-icon 0.3s ease-in-out forwards;
+}
+
+@keyframes hover-icon {
+    0% {
+        transform: scale(1);
+        opacity: 100;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 100;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 100;
+    }
+}

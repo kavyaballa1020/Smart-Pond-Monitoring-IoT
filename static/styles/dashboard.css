@@ -1,0 +1,108 @@
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 700;
+}
+.nav-link{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+.value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.checkbox-apple {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    margin: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+}
+  
+.checkbox-apple label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.checkbox-apple label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+  
+.checkbox-apple input[type="checkbox"]:checked + label {
+    background: linear-gradient(to bottom, #4cd964, #5de24e);
+}
+  
+.checkbox-apple input[type="checkbox"]:checked + label:after {
+    transform: translateX(25px);
+}
+  
+.checkbox-apple label:hover {
+    background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+}
+  
+.checkbox-apple label:hover:after {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+  
+.yep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+}
+
+.temperature i, .ph-value i, .water-level i {
+    font-size: 4rem;
+    display: block;
+    color: #ff6347;
+    margin-bottom: 1rem;
+}

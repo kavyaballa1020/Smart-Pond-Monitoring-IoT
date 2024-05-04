@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Smart Pond CUTM </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/login">
+                <img src="{{ url_for('static', filename='assets/cutm1.png') }}" class="d-inline-block align-top" alt="SmartPond CUTM" style="max-height: 50px;">
+                SmartPond CUTM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login" style="color: #fff;"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" style="color: #fff;"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: #fff;"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Page Content -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1 class="display-4"><strong>Smart Pond Monitoring</strong></h1>
+                    <p class="lead">Smart Pond Monitoring is a project aimed at monitoring various parameters of ponds to ensure optimal conditions for aquatic life. The project utilizes three main sensors:</p>
+                    <div class="card-deck">
+                        <div class="card text-center">
+                            <h5 class="card-title">Temperature Sensor</h5>
+                            <img class="card-img-top card-img-small" src="{{ url_for('static', filename='assets/temp_sensor.png') }}" alt="Temperature Sensor">
+                            <div class="card-body">
+                                <p class="card-text">Measures the temperature of pond water. A temperature sensor is a device that measures the temperature of its environment. It converts changes in temperature into an electrical signal that can be used to regulate the operation of a device.</p>
+                            </div>
+                        </div>
+                        <div class="card text-center">
+                            <h5 class="card-title">pH Sensor</h5>
+                            <img class="card-img-top card-img-small" src="{{ url_for('static', filename='assets/ph.png') }}" alt="pH Sensor">
+                            <div class="card-body">
+                                <p class="card-text">Monitors the pH level of pond water. A pH meter or pH probe is an instrument used to determine the acidity or alkalinity of a solution, typically recorded as a pH value. The pH scale ranges from 0 to 14, with values below 7 indicating acidic conditions and values above 7 indicating alkaline conditions.</p>
+                            </div>
+                        </div>
+                        <div class="card text-center">
+                            <h5 class="card-title">Water Level Sensor</h5>
+                            <img class="card-img-top card-img-small" src="{{ url_for('static', filename='assets/waterlevel.png') }}" alt="Water Level Sensor">
+                            <div class="card-body">
+                                <p class="card-text">Accurately measures the water level in the pond. A water level sensor is a device that measures the height or depth of a liquid, typically used in applications such as flood control, water management, and environmental monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4">The quality of water available to aquatic life is crucial for their health and well-being. Our monitoring system provides real-time data on key parameters to ensure the sustainability of aquatic environments.</p>
+                    <p>With our IoT-enabled monitoring system, we aim to contribute to the enhancement of aquaculture farming productivity by providing actionable insights and recommendations based on data collected from the sensors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                
+                <!-- Team Members -->
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><span>Balla Kavya</span></h5>
+                                <p class="card-text"><span style="color: #6c757d;">Web Development</span></p>
+                                <p class="card-text">Oversees the overall progress and development of the Smart Pond Monitoring project, developing the front end, backend, and databases.</p>
+                                <a href="https://www.linkedin.com/in/" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+                                <a href="https://github.com/" target="_blank" style="color: black;"><i class="fab fa-github fa-2x mr-3"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><span>Sankar Kharada</span></h5>
+                                <p class="card-text"><span style="color: #6c757d;">Data Analyst</span></p>
+                                <p class="card-text">Analyzes and interprets data collected from sensors to provide insights and recommendations.</p>
+                                <a href="https://www.linkedin.com/in/" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+                                <a href="https://github.com/" target="_blank" style="color: black;"><i class="fab fa-github fa-2x mr-3"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kola Bhargav -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><span>Kola Bhargav</span></h5>
+                                <p class="card-text"><span style="color: #6c757d;">Hardware Integration</span></p>
+                                <p class="card-text">Leads the hardware integration efforts and ensures seamless integration of sensors and devices.</p>
+                                <a href="https://www.linkedin.com/in/" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+                                <a href="https://github.com/" target="_blank" style="color: black;"><i class="fab fa-github fa-2x mr-3"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><span>Kunchala Chaitanya</span></h5>
+                                <p class="card-text"><span style="color: #6c757d;">Quality Assurance and Testing</span></p>
+                                <Executes class="card-text">Develops test plans, test cases, and test scenarios for the web application. Executes various types of testing to ensure the quality and reliability of the software.</p>
+                                    <a href="https://www.linkedin.com/in/" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+                                    <a href="https://github.com/" target="_blank" style="color: black;"><i class="fab fa-github fa-2x mr-3"></i></a>
+                                    <a href="https://www.instagram.com/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><span>Kota Minnu Madan</span></h5>
+                                <p class="card-text"><span style="color: #6c757d;">Hardware-Software Integration</span></p>
+                                <p class="card-text">Leads the development team in creating and maintaining the software for monitoring pond parameters.</p>
+                                <a href="https://www.linkedin.com/in/minnukota381" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+                                <a href="https://github.com/minnukota381" target="_blank" style="color: black;"><i class="fab fa-github fa-2x mr-3"></i></a>
+                                <a href="https://www.instagram.com/minnukota381" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

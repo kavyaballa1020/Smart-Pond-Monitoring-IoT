@@ -1,0 +1,123 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 60px;
+}
+
+h2 {
+    color: #1a225e !important;
+    margin-top: 10px;
+}
+
+.navbar{
+    background-color: #1a225e;
+}
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.login-details {
+    padding: 10px;
+    color: #333;
+    margin-top: 20px; /* Adjusted margin */
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.login-details h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a225e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.form-container .mt-3 {
+    margin-top: 10px;
+}
+.footer .icons a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .icons a:hover:before {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.footer .icons a:hover i {
+    animation: hover-icon 0.3s ease-in-out forwards;
+}
+
+@keyframes hover-icon {
+    0% {
+        transform: scale(1);
+        opacity: 100;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 100;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 100;
+    }
+}
+/* Small screens */
+@media (max-width: 767.98px) {
+    .footer {
+        position: fixed; /* Keep the footer fixed at the bottom */
+        bottom: 0; /* Position it at the bottom of the viewport */
+        left: 0; /* Align it to the left side */
+        width: 100%; /* Occupy full width */
+        background-color: #1a225e;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    body {
+        padding-bottom: 60px; /* Add bottom padding equal to footer height */
+    }
+}
+

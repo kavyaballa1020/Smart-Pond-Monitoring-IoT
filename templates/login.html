@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SmartPond CUTM</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/login">
+                <img src="{{ url_for('static', filename='assets/cutm1.png') }}" class="d-inline-block align-top" alt="SmartPond CUTM" style="max-height: 50px;">
+                SmartPond CUTM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #fff;"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" style="color: #fff;"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: #fff;"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <div class="form-container">
+                    <h2>User Login</h2>
+                    {% if error %}
+                    <p class="error-message">{{ error }}</p>
+                    {% endif %}
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Enter your username" name="username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <div class="input-group">
+                                <input type="password" id="password" placeholder="Enter your password" name="password" class="form-control" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" onclick="togglePasswordVisibility()">
+                                        <i id="password-toggle-icon" class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p class="mt-3">Don't have an account? <a href="/register">Register here</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="login-details" style="text-align: justify;">
+                    <h2>SmartPond Monitoring</h2>
+                    <p>SmartPond is a cutting-edge project aimed at monitoring various parameters of ponds to ensure optimal conditions for aquatic life. Our mission is to utilize technology to safeguard the health and well-being of aquatic ecosystems.</p>
+                    <p>Join us in our mission to create sustainable aquatic environments for generations to come.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2022 SmartPond CUTM. All Rights Reserved.</p>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/ballakavya" target="_blank" style="color: #0e76a8;"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+            <a href="https://github.com/kavyaballa1020" target="_blank" style="color: #fff;"><i class="fab fa-github fa-2x mr-3"></i></a>
+            <a href="https://www.instagram.com/kavyaballa1020" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var passwordToggleIcon = document.getElementById("password-toggle-icon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordToggleIcon.classList.remove("fa-eye");
+                passwordToggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                passwordToggleIcon.classList.remove("fa-eye-slash");
+                passwordToggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>

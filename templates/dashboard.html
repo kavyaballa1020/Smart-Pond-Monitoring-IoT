@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Smart Pond CUTM</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #191e43;">
+        <div class="container">
+            <a class="navbar-brand" href="/login">
+                <img src="{{ url_for('static', filename='assets/cutm1.png') }}" class="d-inline-block align-top" alt="SmartPond CUTM" style="max-height: 50px;">
+                SmartPond CUTM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #fff;"><i class="fas fa-user"></i> {{ username }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #fff;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome, {{ username }}!</h2>
+        
+        <div class="row justify-content-center">
+            <!-- Temperature card -->
+            <div class="col-md-4 mb-4">
+                <div class="card temperature text-center">
+                    <div class="card-body d-flex align-items-center justify-content-center" style="height: 100px;">
+                        <i class="fas fa-thermometer-three-quarters" style="color: navy; font-size: 3rem;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Temperature</h5>
+                        <p class="card-text">Current temperature: <span class="value">{{ temperature }}</span> °C</p>
+                        <div class="checkbox-apple">
+                            <input class="yep" id="toggle-temperature" type="checkbox">
+                            <label for="toggle-temperature"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- pH value card -->
+            <div class="col-md-4 mb-4">
+                <div class="card ph-value text-center">
+                    <div class="card-body d-flex align-items-center justify-content-center" style="height: 100px;">
+                        <i class="fas fa-battery-three-quarters" style="color: navy; font-size: 3rem;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">pH Value</h5>
+                        <p class="card-text">Current pH value: <span class="value">{{ ph_value }}</span></p>
+                        <div class="checkbox-apple">
+                            <input class="yep" id="toggle-ph-value" type="checkbox">
+                            <label for="toggle-ph-value"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Water level card -->
+            <div class="col-md-4 mb-4">
+                <div class="card water-level text-center">
+                    <div class="card-body d-flex align-items-center justify-content-center" style="height: 100px;">
+                        <i class="fas fa-water" style="color: navy; font-size: 3rem;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Water Level</h5>
+                        <p class="card-text">Current water level: <span class="value">{{ water_level }}</span></p>
+                        <div class="checkbox-apple">
+                            <input class="yep" id="toggle-water-level" type="checkbox">
+                            <label for="toggle-water-level"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <a href="/ponds" class="btn btn-primary btn-lg">View Ponds</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

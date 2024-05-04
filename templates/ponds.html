@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponds</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/ponds.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/login">
+                <img src="{{ url_for('static', filename='assets/cutm1.png') }}" class="d-inline-block align-top" alt="SmartPond CUTM" style="max-height: 50px;">
+                SmartPond CUTM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #fff;"><i class="fas fa-user"></i> {{ username }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #fff;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pond 1</h5>
+                        <img src="{{ url_for('static', filename='assets/water-drop.svg') }}" alt="Water Drop" class="water-drop">
+                        <p class="card-text">Ramasagar, a peaceful pond, just a few meters away from the forest gate.</p>
+                        <a href="{{ url_for('dashboard', pond_id=1) }}" class="btn btn-primary"><i class="fas fa-fish"></i>View Dashboard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pond 2</h5>
+                        <img src="{{ url_for('static', filename='assets/water-drop.svg') }}" alt="Water Drop" class="water-drop">
+                        <p class="card-text">SitaSagar, a vibrant pond</p>
+                        <a href="{{ url_for('dashboard', pond_id=2) }}" class="btn btn-primary"><i class="fas fa-fish"></i> View Dashboard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pond 3</h5>
+                        <img src="{{ url_for('static', filename='assets/water-drop.svg') }}" alt="Water Drop" class="water-drop">
+                        <p class="card-text">Centurion Pond, that is located nearby CUTM Main gate</p>
+                        <a href="{{ url_for('dashboard', pond_id=3) }}" class="btn btn-primary"><i class="fas fa-fish"></i> View Dashboard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Create New Pond</h5>
+                        <i class="fas fa-plus fa-5x text-primary"></i>
+                        <p class="card-text">Click here to create a new pond</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

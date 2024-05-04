@@ -1,0 +1,103 @@
+.card {
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.jumbotron{
+    color: #1a225e;
+}
+.jumbotron h1{
+    text-transform: uppercase;
+    color: #1d2b91;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+.jumbotron .lead{
+    color: #000000;
+}
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-7px);
+}
+
+.card-title {
+    text-transform: uppercase;
+    margin-top: 15px !important;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #215790;
+}
+.card-text {
+    color: #000000;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.navbar{
+    background-color: #1a225e;
+}
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+}
+
+
+.card-title span {
+    font-weight: bold;
+}
+
+.card-text span {
+    color: #6c757d;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+.card-img-small {
+    max-width: 150px; /* Adjust the max-width as needed */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-body a {
+    margin-right: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.card-body a:hover {
+    color: #0056b3;
+}
+
+.card-body a i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-body a:hover i {
+    transform: scale(1.2);
+}
